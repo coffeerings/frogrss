@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Tidy Frog RSS",
+  "description": "Optimising the Frog RSS widget view",
+  "short_name": "Mod RSS widget",
+  "author": "John Walker",
+  "homepage_url": "http://coffeerings.co.uk",
+  "icons": { "16": "logo.png",
+             "48": "logo.png",
+            "128": "logo.png" },
+  "version": "0.2",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": ["application.css"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "application.html"
+  }
+}
